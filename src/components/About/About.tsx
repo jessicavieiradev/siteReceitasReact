@@ -2,8 +2,7 @@ import Paragraph from "../Paragraph/Paragraph";
 import Title from "../Title/Title";
 
 const About = () => {
-  const caminhoImagem = "../../../aboutImage.png";
-  // "
+  const caminhoImagem = `${import.meta.env.BASE_URL}aboutImage.png`;
 
   return (
     <section className="container mx-auto grid grid-cols-1 lg:grid-cols-2 w-full items-center mt-16 md:mt-24 px-4 gap-4">

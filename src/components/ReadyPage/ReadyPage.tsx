@@ -10,9 +10,9 @@ const ReadyPage = () => {
   const handleNavigate = () => {
     navigate(`${rotaPrincipal}recipes`);
   };
-  const pathImage: string = `../../..${rotaPrincipal}readyPageDesktop.png`;
-  const pathImageTablet: string = `../../..${rotaPrincipal}readyPageTablet.png`;
-  const pathImageMobile: string = `../../..${rotaPrincipal}readyPageMobile.png`;
+  const pathImage: string = `${import.meta.env.BASE_URL}readyPageDesktop.png`;
+  const pathImageTablet: string = `${import.meta.env.BASE_URL}readyPageTablet.png`;
+  const pathImageMobile: string = `${import.meta.env.BASE_URL}readyPageMobile.png`;
 
   return (
     <section className="container mx-auto mt-16 md:mt-24 px-4">

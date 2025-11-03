@@ -8,8 +8,8 @@ const Main = () => {
   const handleNavigate = () => {
     navigate(`${rotaPrincipal}recipes`);
   };
-  const caminhoImagem = `../../..${rotaPrincipal}heroImage.png`;
-  const caminhoImagemMobile = `../../..${rotaPrincipal}heroImageMobile.png`;
+  const caminhoImagem = `${import.meta.env.BASE_URL}heroImage.png`;
+  const caminhoImagemMobile = `${import.meta.env.BASE_URL}heroImageMobile.png`;
 
   //container main
   const mainStyle: string =
