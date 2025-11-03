@@ -6,13 +6,13 @@ import NavBarMobile from "../NavBar/NavBarMobile";
 const Header = () => {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/siteReceitasReact/recipes`);
+    navigate(`/recipes`);
   };
   return (
     <header className="fixed top-0 w-full bg-background p-4 border-b border-b-gray-300">
       <div className="mx-auto container flex justify-between items-center">
         <NavLink
-          to="/siteReceitasReact/"
+          to="/"
           className="text-xl font-serif text-primary"
         >
           Global Recipes Finder

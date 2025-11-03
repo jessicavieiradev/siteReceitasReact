@@ -6,15 +6,15 @@ import { MenuIcon, XIcon } from "lucide-react";
 const NavBarMobile = () => {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/siteReceitasReact/recipes`);
+    navigate(`/recipes`);
   };
   interface NavLinks {
     to: string;
     label: string;
   }
   const navLinks: NavLinks[] = [
-    { to: "/siteReceitasReact/", label: "Home" },
-    { to: "/siteReceitasReact/recipes", label: "Recipes" },
+    { to: "/", label: "Home" },
+    { to: "/recipes", label: "Recipes" },
   ];
 
   const [openMenu, setOpenMenu] = useState(false);
