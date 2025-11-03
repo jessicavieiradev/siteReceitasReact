@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* 🎨 CORES */
+  --color-primary: #173a34;
+  --color-secondary: #fd9d68;
+  --color-emphasis: #fd9d6880;
+  --color-background: #f6f5f1;
+  --color-text: #333333;
+
+  /* 📝 TIPOGRAFIA (Fontes) */
+  --font-primary: "Nunito", sans-serif;
+}
+
+@layer base {
+  :root {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+}
