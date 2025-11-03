@@ -6,8 +6,8 @@ const NavBar = () => {
     label: string;
   }
   const navLinks:NavLinks[] = [
-    { to: "/siteReceitasReact/", label: "Home" },
-    { to: "/siteReceitasReact/recipes", label: "Recipes" },
+    { to: "/", label: "Home" },
+    { to: "/recipes", label: "Recipes" },
   ];
 
   const baseClasses: string = "cursor-pointer";
