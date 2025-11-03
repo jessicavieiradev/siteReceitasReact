@@ -6,7 +6,7 @@ import NavBarMobile from "../NavBar/NavBarMobile";
 const Header = () => {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`/siteReceitasReact/recipes`);
   };
   return (
     <header className="fixed top-0 w-full bg-background p-4 border-b border-b-gray-300">

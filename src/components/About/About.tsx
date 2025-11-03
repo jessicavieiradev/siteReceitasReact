@@ -2,7 +2,7 @@ import Paragraph from "../Paragraph/Paragraph";
 import Title from "../Title/Title";
 
 const About = () => {
-  const caminhoImagem = "../../../aboutImage.png"; 
+  const caminhoImagem = "../../../siteReceitasReact/aboutImage.png";
   // "
 
   return (

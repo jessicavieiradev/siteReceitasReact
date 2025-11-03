@@ -12,7 +12,7 @@ const RecipesCard = ({ recipe }: { recipe: Recipe }) => {
   }
 
   const handleNavigate = () => {
-    navigate(`/recipes/${recipe.id}`);
+    navigate(`/siteReceitasReact/recipes/${recipe.id}`);
   };
   return (
     <div
