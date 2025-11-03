@@ -6,10 +6,13 @@ import {
 import { useEffect, useState } from "react";
 import Title from "../Title/Title";
 import {
+    CalculatorIcon,
   ChevronRightIcon,
   ClockIcon,
   CookingPotIcon,
+  EarthIcon,
   UserIcon,
+  UtensilsIcon,
 } from "lucide-react";
 
 const RecipePageDetails = () => {
@@ -46,19 +49,35 @@ const RecipePageDetails = () => {
       <Title className="text-3xl md:text-4xl text-center">
         {currentRecipe.name}
       </Title>
-      <div className="flex flex-wrap gap-4 justify-center">
-        <span className="flex gap-2">
-          <UserIcon />
-          Serving: {currentRecipe.servings}
-        </span>
-        <span className="flex gap-2">
-          <ClockIcon />
-          Prep: {currentRecipe.prepTimeMinutes} min
-        </span>
-        <span className="flex gap-2">
-          <CookingPotIcon />
-          Cook: {currentRecipe.cookTimeMinutes} min
-        </span>
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
+          <span className="flex gap-2">
+            <UserIcon />
+            Serving: {currentRecipe.servings}
+          </span>
+          <span className="flex gap-2">
+            <ClockIcon />
+            Prep: {currentRecipe.prepTimeMinutes} min
+          </span>
+          <span className="flex gap-2">
+            <CookingPotIcon />
+            Cook: {currentRecipe.cookTimeMinutes} min
+          </span>
+        </div>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <span className="flex gap-2">
+            <EarthIcon />
+            Origin: {currentRecipe.cuisine}
+          </span>
+          <span className="flex gap-2">
+            <CalculatorIcon />
+            Calories Per Serving: {currentRecipe.caloriesPerServing} kcal
+          </span>
+          <span className="flex gap-2">
+            <UtensilsIcon />
+            Meal Type: {currentRecipe.mealType}
+          </span>
+        </div>
       </div>
       <div className=" flex flex-col-reverse md:flex-row justify-center md:items-center gap-4">
         <div className="md:w-1/2 flex flex-col gap-4">
@@ -74,7 +93,11 @@ const RecipePageDetails = () => {
           </ul>
         </div>
         <div className="md:w-1/2 overflow-hidden">
-          <img className="w-[500px] h-[300px] object-cover" src={currentRecipe.image} alt="" />
+          <img
+            className="w-[500px] h-[300px] object-cover"
+            src={currentRecipe.image}
+            alt=""
+          />
         </div>
       </div>
 
@@ -85,7 +108,7 @@ const RecipePageDetails = () => {
         <ul className="flex flex-col gap-2">
           {currentRecipe.instructions.map((instruction, index) => (
             <li className="flex  gap-2" key={index}>
-                  - {instruction}
+              - {instruction}
             </li>
           ))}
         </ul>

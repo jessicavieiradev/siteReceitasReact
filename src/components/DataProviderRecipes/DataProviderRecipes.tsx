@@ -16,6 +16,9 @@ export interface Recipe {
   ingredients: string[];
   instructions: string[];
   rating: number;
+  mealType: string;
+  cuisine: string;
+  caloriesPerServing: number;
 }
 interface DataProviderProps {
   children: React.ReactNode;
