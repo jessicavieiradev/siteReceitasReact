@@ -29,12 +29,13 @@ interface DataContextType {
   error: string | null;
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+  rotaPrincipal: string;
 }
 
 const DataContext = createContext<DataContextType | null>(null);
 
 // eslint-disable-next-line react-refresh/only-export-components
-    export const useData = () => {
+export const useData = () => {
   const context = useContext(DataContext) as DataContextType;
 
   if (!context) {
@@ -48,6 +49,7 @@ export default function DataProviderRecipes({ children }: DataProviderProps) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState<string>("");
+  const rotaPrincipal = "/siteReceitasReact/";
 
   async function fetchInitialRecipes() {
     setLoading(true);
@@ -82,8 +84,9 @@ export default function DataProviderRecipes({ children }: DataProviderProps) {
       error,
       search,
       setSearch,
+      rotaPrincipal
     }),
-    [recipes, loading, error, search]
+    [recipes, loading, error, search, rotaPrincipal]
   );
 
   return (

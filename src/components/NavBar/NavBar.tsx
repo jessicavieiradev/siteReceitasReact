@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { useData } from "../DataProviderRecipes/DataProviderRecipes";
 
 const NavBar = () => {
+  const { rotaPrincipal } = useData();  
   interface NavLinks {
     to: string;
     label: string;
   }
   const navLinks:NavLinks[] = [
-    { to: "/", label: "Home" },
-    { to: "/recipes", label: "Recipes" },
+    { to: `${rotaPrincipal}`, label: "Home" },
+    { to: `${rotaPrincipal}recipes`, label: "Recipes" },
   ];
 
   const baseClasses: string = "cursor-pointer";
@@ -19,6 +21,7 @@ const NavBar = () => {
         <NavLink
           key={link.to}
           to={link.to}
+          end={link.label === "Home"}
           className={
             ({ isActive }) =>
               isActive

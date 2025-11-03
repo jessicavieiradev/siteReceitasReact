@@ -2,11 +2,13 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../button/Button";
 import { MenuIcon, XIcon } from "lucide-react";
+import { useData } from "../DataProviderRecipes/DataProviderRecipes";
 
 const NavBarMobile = () => {
   const navigate = useNavigate();
+  const { rotaPrincipal } = useData();  
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`${rotaPrincipal}recipes`);
   };
   interface NavLinks {
     to: string;

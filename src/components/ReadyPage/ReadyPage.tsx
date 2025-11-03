@@ -2,15 +2,17 @@ import { useNavigate } from "react-router-dom";
 import Button from "../button/Button";
 import Paragraph from "../Paragraph/Paragraph";
 import Title from "../Title/Title";
+import { useData } from "../DataProviderRecipes/DataProviderRecipes";
 
 const ReadyPage = () => {
+  const { rotaPrincipal } = useData();
   const navigate = useNavigate()
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`${rotaPrincipal}recipes`);
   };
-  const pathImage: string = "../../../readyPageDesktop.png";
-  const pathImageTablet: string = "../../../readyPageTablet.png";
-  const pathImageMobile: string = "../../../readyPageMobile.png";
+  const pathImage: string = `../../..${rotaPrincipal}readyPageDesktop.png`;
+  const pathImageTablet: string = `../../..${rotaPrincipal}readyPageTablet.png`;
+  const pathImageMobile: string = `../../..${rotaPrincipal}readyPageMobile.png`;
 
   return (
     <section className="container mx-auto mt-16 md:mt-24 px-4">

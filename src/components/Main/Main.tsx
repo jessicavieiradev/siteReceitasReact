@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../button/Button";
+import { useData } from "../DataProviderRecipes/DataProviderRecipes";
 
 const Main = () => {
-  const navigate = useNavigate()
+  const { rotaPrincipal } = useData();
+  const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`${rotaPrincipal}recipes`);
   };
-  const caminhoImagem = "../../../heroImage.png";
-  const caminhoImagemMobile = "../../../heroImageMobile.png";
+  const caminhoImagem = `../../..${rotaPrincipal}heroImage.png`;
+  const caminhoImagemMobile = `../../..${rotaPrincipal}heroImageMobile.png`;
 
   //container main
   const mainStyle: string =

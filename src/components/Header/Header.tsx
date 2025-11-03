@@ -2,17 +2,19 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../button/Button";
 import NavBar from "../NavBar/NavBar";
 import NavBarMobile from "../NavBar/NavBarMobile";
+import { useData} from "../DataProviderRecipes/DataProviderRecipes";
 
 const Header = () => {
   const navigate = useNavigate();
+  const { rotaPrincipal } = useData();
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`${rotaPrincipal}recipes`);
   };
   return (
     <header className="fixed top-0 w-full bg-background p-4 border-b border-b-gray-300">
       <div className="mx-auto container flex justify-between items-center">
         <NavLink
-          to="/"
+          to={`${rotaPrincipal}`}
           className="text-xl font-serif text-primary"
         >
           Global Recipes Finder
