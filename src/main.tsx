@@ -6,7 +6,7 @@ import DataProviderRecipes from "./components/DataProviderRecipes/DataProviderRe
 
 createRoot(document.getElementById("root")!).render(
   <DataProviderRecipes>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   </DataProviderRecipes>
