@@ -49,7 +49,7 @@ export default function DataProviderRecipes({ children }: DataProviderProps) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState<string>("");
-  const rotaPrincipal = "/siteReceitasReact/";
+  const rotaPrincipal = "/";
 
   async function fetchInitialRecipes() {
     setLoading(true);
