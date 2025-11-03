@@ -6,11 +6,11 @@ import Title from "../Title/Title";
 const ReadyPage = () => {
   const navigate = useNavigate()
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`/siteReceitasReact/recipes`);
   };
-  const pathImage: string = "../../../readyPageDesktop.png";
-  const pathImageTablet: string = "../../../readyPageTablet.png";
-  const pathImageMobile: string = "../../../readyPageMobile.png";
+  const pathImage: string = "../../../siteReceitasReact/readyPageDesktop.png";
+  const pathImageTablet: string = "../../../siteReceitasReact/readyPageTablet.png";
+  const pathImageMobile: string = "../../../siteReceitasReact/readyPageMobile.png";
 
   return (
     <section className="container mx-auto mt-16 md:mt-24 px-4">

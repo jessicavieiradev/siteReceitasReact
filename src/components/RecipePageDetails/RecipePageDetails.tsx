@@ -50,7 +50,7 @@ const RecipePageDetails = () => {
         {currentRecipe.name}
       </Title>
       <div className="flex flex-col gap-4">
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center">
           <span className="flex gap-2">
             <UserIcon />
             Serving: {currentRecipe.servings}
@@ -64,7 +64,7 @@ const RecipePageDetails = () => {
             Cook: {currentRecipe.cookTimeMinutes} min
           </span>
         </div>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center">
           <span className="flex gap-2">
             <EarthIcon />
             Origin: {currentRecipe.cuisine}

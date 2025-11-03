@@ -4,10 +4,10 @@ import Button from "../button/Button";
 const Main = () => {
   const navigate = useNavigate()
   const handleNavigate = () => {
-    navigate(`/recipes`);
+    navigate(`/siteReceitasReact/recipes`);
   };
-  const caminhoImagem = "../../../heroImage.png";
-  const caminhoImagemMobile = "../../../heroImageMobile.png";
+  const caminhoImagem = "../../../siteReceitasReact/heroImage.png";
+  const caminhoImagemMobile = "../../../siteReceitasReact/heroImageMobile.png";
 
   //container main
   const mainStyle: string =

@@ -10,9 +10,9 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/recipes/:id" element={<RecipePageDetails />} />
+        <Route path="/siteReceitasReact/" element={<Home />} />
+        <Route path="/siteReceitasReact/recipes" element={<Recipes />} />
+        <Route path="/siteReceitasReact/recipes/:id" element={<RecipePageDetails />} />
       </Routes>
 
       <Footer />
