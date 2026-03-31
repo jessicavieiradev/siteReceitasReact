@@ -35,7 +35,7 @@ Para testar o projeto em sua máquina:
 
 1. Clone o repositório:  
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/jessicavieiradev/siteReceitasReact.git
 2. Rode npm install
 3. Rode npm run dev
 4. Ctrl + clique na url fornecida
